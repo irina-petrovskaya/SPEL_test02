@@ -3,7 +3,10 @@ package a.b.c;
 import java.util.List;
 
 /**
+ ********************************
  * Created by Irina.Petrovskaya on 5/29/13.
+ * Project: SPEL_test02
+ ********************************
  */
 public class B1 {
     private MyType1.InnerEnum1 inner1;
