@@ -18,14 +18,12 @@ public class B1 {
         b2s = b2sArg;
     }
 
-
+    public String getInner2() {
+        return inner2;
+    }
 
     public void setInner2(String inner2) {
         this.inner2 = inner2;
-    }
-
-    public String getInner2() {
-        return inner2;
     }
 
     public MyType1.InnerEnum1 getInner1() {

@@ -3,9 +3,6 @@ import a.b.c.B2;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.Iterator;
-import java.util.List;
-
 /**
  * *******************************
  * Created by Irina.Petrovskaya on 4/14/2016.
