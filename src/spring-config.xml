@@ -2,9 +2,27 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-      <bean id="b1" class="a.b.c.B1">
-           <property name="inner1" value="#{T(a.b.c.MyType1$InnerEnum1).EL1}"/>
-          <property name="inner2" value="#{T(a.b.c.MyType1$InnerType2).foo()}"/>
-      </bean>
+    <bean id="b1" class="a.b.c.B1">
+        <property name="inner1" value="#{T(a.b.c.MyType1$InnerEnum1).EL1}"/>
+        <property name="inner2" value="#{T(a.b.c.MyType1$InnerType2).foo()}"/>
+        <property name="b2s" value="#{@b3.b2List.?[intProp == stringProp.indexOf('2')]}"/>
+    </bean>
+    <bean class="a.b.c.B3" id="b3">
+        <property name="b2List">
+            <list>
+                <bean class="a.b.c.B2">
+                    <property name="doubleProp" value="100"/>
+                    <property name="intProp" value="1"/>
+                    <property name="stringProp" value="b2string"/>
+
+                </bean>
+                <bean class="a.b.c.B2">
+                    <property name="doubleProp" value="300"/>
+                    <property name="intProp" value="10"/>
+                    <property name="stringProp" value="someString2"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
 
 </beans>
