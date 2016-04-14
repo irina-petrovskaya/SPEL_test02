@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-      <bean id="b1" class="a.b.c.B1">
-           <property name="inner1" value="#{T(a.b.c.MyType1$InnerEnum1).EL1}"/>
-          <property name="inner2" value="#{T(a.b.c.MyType1$InnerType2).foo()}"/>
-      </bean>
+    <bean id="b1" class="a.b.c.B1">
+        <property name="inner1" value="#{T(a.b.c.MyType1$InnerEnum1).EL2}"/>
+        <property name="inner2" value="#{T(a.b.c.MyType1$InnerType2).foo()}"/>
+    </bean>
 
 </beans>
